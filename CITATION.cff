@@ -7,3 +7,5 @@ authors:
     given-names: Jay
 year: 2026
 abstract: "Reference implementation and reproducibility materials for staged least-privilege authorization remediation using the Shadow–Observe–Restrict rollout pattern."
+repository-code: "https://github.com/jgoradia3/shadow-observe-restrict"
+url: "https://github.com/jgoradia3/shadow-observe-restrict"

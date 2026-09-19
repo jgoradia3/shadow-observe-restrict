@@ -1,0 +1,5 @@
+{
+  "mode": "example-fallback",
+  "claim_scope": "local cloud-native configuration examples; not public corpus",
+  "note": "Run bash scripts/fetch_public_sources.sh, python3 scripts/extract_public_policy_configs.py, and bash scripts/run_all.sh --public to derive workloads from public repositories."
+}

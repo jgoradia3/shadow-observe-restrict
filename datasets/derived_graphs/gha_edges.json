@@ -1,0 +1,20 @@
+[
+  {
+    "subject": "gha:deploy",
+    "action": "read",
+    "resource": "github:contents",
+    "source": "github-actions"
+  },
+  {
+    "subject": "gha:deploy",
+    "action": "write",
+    "resource": "github:deployments",
+    "source": "github-actions"
+  },
+  {
+    "subject": "gha:deploy",
+    "action": "write",
+    "resource": "github:id-token",
+    "source": "github-actions"
+  }
+]

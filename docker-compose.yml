@@ -1,0 +1,70 @@
+services:
+  controller:
+    build: .
+    command: uvicorn controller.app:app --host 0.0.0.0 --port 8000
+    ports: ["8000:8000"]
+    environment:
+      - SOR_STABLE_POLICY=/app/datasets/examples/policy_stable.json
+      - SOR_CANDIDATE_POLICY=/app/datasets/examples/policy_candidate_over_aggressive.json
+      - SOR_MISMATCH_THRESHOLD=0.03
+      - SOR_MIN_EVENTS=20
+    volumes:
+      - ./results:/app/results
+
+  telemetry:
+    build: .
+    command: uvicorn telemetry.collector:app --host 0.0.0.0 --port 8100
+    ports: ["8100:8100"]
+    environment:
+      - SOR_CONTROLLER_URL=http://controller:8000
+    depends_on: [controller]
+    volumes:
+      - ./results:/app/results
+
+  auth-node-1:
+    build: .
+    command: uvicorn auth_node.app:app --host 0.0.0.0 --port 8200
+    ports: ["8201:8200"]
+    environment:
+      - SOR_NODE_ID=node-1
+      - SOR_CONTROLLER_URL=http://controller:8000
+      - SOR_TELEMETRY_URL=http://telemetry:8100
+      - SOR_SYNC_INTERVAL_MS=500
+      - SOR_SYNC_DELAY_MS=0
+      - SOR_TELEMETRY_DELAY_MS=0
+    depends_on: [controller, telemetry]
+
+  auth-node-2:
+    build: .
+    command: uvicorn auth_node.app:app --host 0.0.0.0 --port 8200
+    ports: ["8202:8200"]
+    environment:
+      - SOR_NODE_ID=node-2
+      - SOR_CONTROLLER_URL=http://controller:8000
+      - SOR_TELEMETRY_URL=http://telemetry:8100
+      - SOR_SYNC_INTERVAL_MS=500
+      - SOR_SYNC_DELAY_MS=${NODE2_SYNC_DELAY_MS:-1500}
+      - SOR_TELEMETRY_DELAY_MS=${NODE2_TELEMETRY_DELAY_MS:-0}
+    depends_on: [controller, telemetry]
+
+  auth-node-3:
+    build: .
+    command: uvicorn auth_node.app:app --host 0.0.0.0 --port 8200
+    ports: ["8203:8200"]
+    environment:
+      - SOR_NODE_ID=node-3
+      - SOR_CONTROLLER_URL=http://controller:8000
+      - SOR_TELEMETRY_URL=http://telemetry:8100
+      - SOR_SYNC_INTERVAL_MS=500
+      - SOR_SYNC_DELAY_MS=${NODE3_SYNC_DELAY_MS:-3000}
+      - SOR_TELEMETRY_DELAY_MS=${NODE3_TELEMETRY_DELAY_MS:-500}
+      - SOR_PARTIAL_FAILURE=${NODE3_PARTIAL_FAILURE:-0}
+    depends_on: [controller, telemetry]
+
+  replay:
+    build: .
+    command: python -m replay.replay_client --nodes http://auth-node-1:8200,http://auth-node-2:8200,http://auth-node-3:8200 --trace /app/datasets/examples/replay_trace.json --rounds 3 --sleep-ms 50 --fanout
+    depends_on: [auth-node-1, auth-node-2, auth-node-3]
+    profiles: ["replay"]
+    volumes:
+      - ./results:/app/results

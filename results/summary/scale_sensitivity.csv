@@ -1,0 +1,10 @@
+Scale,Seed,Identities,Stable Entitlements,Required Entitlements,Generator-Labeled Redundant Entitlements,Requests,Observation Requests,Over-Aggressive Proposed Reduction %,Over-Aggressive Observation Mismatches,Over-Aggressive Observation Mismatch Rate,Over-Aggressive Required Would-Deny,Over-Aggressive Full SOR Action,Over-Aggressive Legitimate Denials,Lower-Risk Proposed Reduction %,Lower-Risk Observation Mismatches,Lower-Risk Observation Mismatch Rate,Lower-Risk Required Would-Deny,Lower-Risk Full SOR Action,Lower-Risk Legitimate Denials,Raw Event File
+Small,2026,4,8,7,1,50000,10000,37.5,599,0.059900,599,Promotion withheld,0,12.5,93,0.009300,0,Promoted,0,results/raw/scale_sensitivity/small_seed_2026.csv
+Small,2027,4,8,7,1,50000,10000,37.5,630,0.063000,630,Promotion withheld,0,12.5,98,0.009800,0,Promoted,0,results/raw/scale_sensitivity/small_seed_2027.csv
+Small,2028,4,8,7,1,50000,10000,37.5,603,0.060300,603,Promotion withheld,0,12.5,89,0.008900,0,Promoted,0,results/raw/scale_sensitivity/small_seed_2028.csv
+Medium,2026,100,500,450,50,50000,10000,10.0,627,0.062700,627,Promotion withheld,0,10.0,47,0.004700,0,Promoted,0,results/raw/scale_sensitivity/medium_seed_2026.csv
+Medium,2027,100,500,450,50,50000,10000,10.0,556,0.055600,556,Promotion withheld,0,10.0,61,0.006100,0,Promoted,0,results/raw/scale_sensitivity/medium_seed_2027.csv
+Medium,2028,100,500,450,50,50000,10000,10.0,608,0.060800,608,Promotion withheld,0,10.0,53,0.005300,0,Promoted,0,results/raw/scale_sensitivity/medium_seed_2028.csv
+Large,2026,1000,5000,4500,500,50000,10000,10.0,593,0.059300,593,Promotion withheld,0,10.0,56,0.005600,0,Promoted,0,results/raw/scale_sensitivity/large_seed_2026.csv
+Large,2027,1000,5000,4500,500,50000,10000,10.0,561,0.056100,561,Promotion withheld,0,10.0,60,0.006000,0,Promoted,0,results/raw/scale_sensitivity/large_seed_2027.csv
+Large,2028,1000,5000,4500,500,50000,10000,10.0,567,0.056700,567,Promotion withheld,0,10.0,39,0.003900,0,Promoted,0,results/raw/scale_sensitivity/large_seed_2028.csv

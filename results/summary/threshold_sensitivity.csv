@@ -1,0 +1,11 @@
+Mismatch Threshold,Candidate,Observation Requests,Observation Mismatches,Observation Mismatch Rate,Required Would-Deny,Candidate Expansions,Full SOR Action,Legitimate Denials
+0.005,Over-aggressive candidate,10000,599,0.059900,599,0,Promotion withheld,0
+0.005,Lower-risk candidate,10000,93,0.009300,0,0,Promotion withheld,0
+0.010,Over-aggressive candidate,10000,599,0.059900,599,0,Promotion withheld,0
+0.010,Lower-risk candidate,10000,93,0.009300,0,0,Promoted,0
+0.030,Over-aggressive candidate,10000,599,0.059900,599,0,Promotion withheld,0
+0.030,Lower-risk candidate,10000,93,0.009300,0,0,Promoted,0
+0.050,Over-aggressive candidate,10000,599,0.059900,599,0,Promotion withheld,0
+0.050,Lower-risk candidate,10000,93,0.009300,0,0,Promoted,0
+0.100,Over-aggressive candidate,10000,599,0.059900,599,0,Promotion withheld,0
+0.100,Lower-risk candidate,10000,93,0.009300,0,0,Promoted,0

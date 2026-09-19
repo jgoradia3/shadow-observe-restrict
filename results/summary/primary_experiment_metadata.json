@@ -1,0 +1,60 @@
+{
+  "seed": 2026,
+  "request_count": 50000,
+  "sampling": "deterministic weighted draws using random.Random; no independence claim",
+  "single_run": true,
+  "synthetic": true,
+  "oracle": "required-v1 generator-defined required subject/action/resource allow-list",
+  "stable_policy_file": "datasets/examples/policy_stable.json",
+  "required_policy_file": "datasets/examples/policy_required.json",
+  "stable_entitlements": 8,
+  "required_entitlements": 7,
+  "generator_labeled_redundant_entitlements": 1,
+  "thresholds": {
+    "observation_prefix_fraction": 0.2,
+    "observation_prefix_requests": 10000,
+    "minimum_gate_observations": 20,
+    "mismatch_rate_threshold": 0.03,
+    "legitimate_denial_threshold": 0,
+    "candidate_expansion_threshold": 0
+  },
+  "candidates": {
+    "over_aggressive": {
+      "label": "Over-aggressive candidate",
+      "policy_file": "datasets/examples/policy_candidate_over_aggressive.json",
+      "entitlements": 5,
+      "removed_entitlements": 3,
+      "proposed_reduction_percent": 37.5,
+      "full_sor_gate_passed": false,
+      "gate_metrics": {
+        "observation_requests": 10000,
+        "observation_mismatches": 599,
+        "observation_mismatch_rate": 0.0599,
+        "observation_required_would_deny": 599,
+        "observation_expansions": 0
+      }
+    },
+    "lower_risk": {
+      "label": "Lower-risk candidate",
+      "policy_file": "datasets/examples/policy_candidate_lower_risk.json",
+      "entitlements": 7,
+      "removed_entitlements": 1,
+      "proposed_reduction_percent": 12.5,
+      "full_sor_gate_passed": true,
+      "gate_metrics": {
+        "observation_requests": 10000,
+        "observation_mismatches": 93,
+        "observation_mismatch_rate": 0.0093,
+        "observation_required_would_deny": 0,
+        "observation_expansions": 0
+      }
+    }
+  },
+  "metric_definitions": {
+    "LDR": "enforced legitimate denials divided by all replay requests",
+    "candidate_LDR": "required requests the candidate would deny divided by requests in the replay prefix",
+    "mismatch": "stable and candidate decisions differ",
+    "affected_IDs": "distinct subjects with enforced legitimate denials",
+    "oracle_required": "membership in required-v1, not membership in the effective stable policy"
+  }
+}

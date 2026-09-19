@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Shadow–Observe–Restrict (SOR): Reference Implementation"
+message: "If you use this reference implementation, please cite the accompanying article and this repository."
+type: software
+authors:
+  - family-names: Goradia
+    given-names: Jay
+year: 2026
+abstract: "Reference implementation and reproducibility materials for staged least-privilege authorization remediation using the Shadow–Observe–Restrict rollout pattern."

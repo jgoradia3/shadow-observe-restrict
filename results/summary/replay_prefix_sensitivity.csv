@@ -1,0 +1,9 @@
+Candidate,Replay Prefix,Agreement S,Mismatches,Candidate Would-Deny,Candidate LDR,Candidate-Affected IDs,Request Count
+Over-aggressive candidate,7.1%,0.937833,222,222,0.06216746,2,3571
+Over-aggressive candidate,21.4%,0.939425,649,649,0.060574949,2,10714
+Over-aggressive candidate,50.0%,0.939240,1519,1519,0.06076,2,25000
+Over-aggressive candidate,100.0%,0.939280,3036,3036,0.06072,2,50000
+Lower-risk candidate,7.1%,0.990759,33,0,0,0,3571
+Lower-risk candidate,21.4%,0.990480,102,0,0,0,10714
+Lower-risk candidate,50.0%,0.991120,222,0,0,0,25000
+Lower-risk candidate,100.0%,0.991080,446,0,0,0,50000

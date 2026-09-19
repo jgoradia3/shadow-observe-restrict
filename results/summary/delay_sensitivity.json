@@ -1,0 +1,25 @@
+{
+  "rows": [
+    {
+      "delay_ms": 500,
+      "events": 1200,
+      "stale_exposure": 45,
+      "convergence_ms": 1000,
+      "divergence_rate": 0.0
+    },
+    {
+      "delay_ms": 3000,
+      "events": 1200,
+      "stale_exposure": 120,
+      "convergence_ms": 3500,
+      "divergence_rate": 0.0
+    },
+    {
+      "delay_ms": 7000,
+      "events": 1200,
+      "stale_exposure": 208,
+      "convergence_ms": 7499,
+      "divergence_rate": 0.035
+    }
+  ]
+}

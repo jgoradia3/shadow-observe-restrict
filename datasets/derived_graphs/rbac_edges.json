@@ -1,0 +1,20 @@
+[
+  {
+    "subject": "svc-deploy",
+    "action": "get",
+    "resource": "k8s:prod:deployments",
+    "source": "kubernetes-rbac"
+  },
+  {
+    "subject": "svc-deploy",
+    "action": "list",
+    "resource": "k8s:prod:deployments",
+    "source": "kubernetes-rbac"
+  },
+  {
+    "subject": "svc-deploy",
+    "action": "update",
+    "resource": "k8s:prod:deployments",
+    "source": "kubernetes-rbac"
+  }
+]

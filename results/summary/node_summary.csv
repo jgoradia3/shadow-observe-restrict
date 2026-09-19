@@ -1,0 +1,9 @@
+node_id,mode,policy_version,events,mismatches,mismatch_rate
+node-1,rollback,stable-v1,282,0,0.0
+node-1,shadow,candidate-over-aggressive-v1,118,7,0.059322033898305086
+node-2,rollback,stable-v1,252,0,0.0
+node-2,shadow,candidate-over-aggressive-v1,118,7,0.059322033898305086
+node-2,stable,stable-v1,30,0,0.0
+node-3,rollback,stable-v1,222,0,0.0
+node-3,shadow,candidate-over-aggressive-v1,118,7,0.059322033898305086
+node-3,stable,stable-v1,60,0,0.0

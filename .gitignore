@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.env
+.DS_Store
+.venv/
+
+results/raw/*.csv
+results/tables/*.csv
+results/tables/*.json
+results/figures/*.png
+
+# Public-source fetch outputs. The repository ships provenance and fetch/extract scripts,
+# not vendored third-party repositories or generated extraction inventories.
+datasets/public_sources/raw/
+datasets/public_sources/extracted/
+datasets/metadata/extracted_files.csv
+datasets/metadata/extracted_files.json
+*.py[cod]

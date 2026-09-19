@@ -1,0 +1,10 @@
+[
+  {"subject":"svc-build","action":"read","resource":"repo","weight":40,"expected_rare":false},
+  {"subject":"svc-build","action":"write","resource":"artifact","weight":30,"expected_rare":false},
+  {"subject":"svc-deploy","action":"read","resource":"artifact","weight":20,"expected_rare":false},
+  {"subject":"svc-deploy","action":"write","resource":"deployment","weight":15,"expected_rare":false},
+  {"subject":"svc-backup","action":"write","resource":"backup-store","weight":3,"expected_rare":true},
+  {"subject":"svc-incident","action":"read","resource":"audit-log","weight":2,"expected_rare":true},
+  {"subject":"svc-incident","action":"write","resource":"ticket","weight":2,"expected_rare":true},
+  {"subject":"svc-backup","action":"read","resource":"database","weight":1,"expected_rare":true,"workload_class":"nonrequired_stale_access"}
+]

@@ -1,0 +1,36 @@
+{
+  "version": "public-derived-v1",
+  "description": "Policy derived from public authorization configuration structures.",
+  "allow": [
+    {
+      "subject": "svc-deploy",
+      "action": "get",
+      "resource": "k8s:prod:deployments"
+    },
+    {
+      "subject": "svc-deploy",
+      "action": "list",
+      "resource": "k8s:prod:deployments"
+    },
+    {
+      "subject": "svc-deploy",
+      "action": "update",
+      "resource": "k8s:prod:deployments"
+    },
+    {
+      "subject": "gha:deploy",
+      "action": "read",
+      "resource": "github:contents"
+    },
+    {
+      "subject": "gha:deploy",
+      "action": "write",
+      "resource": "github:deployments"
+    },
+    {
+      "subject": "gha:deploy",
+      "action": "write",
+      "resource": "github:id-token"
+    }
+  ]
+}

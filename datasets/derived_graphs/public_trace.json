@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "svc-deploy",
+    "action": "get",
+    "resource": "k8s:prod:deployments",
+    "weight": 2,
+    "expected_rare": true
+  },
+  {
+    "subject": "svc-deploy",
+    "action": "list",
+    "resource": "k8s:prod:deployments",
+    "weight": 15,
+    "expected_rare": false
+  },
+  {
+    "subject": "svc-deploy",
+    "action": "update",
+    "resource": "k8s:prod:deployments",
+    "weight": 15,
+    "expected_rare": false
+  },
+  {
+    "subject": "gha:deploy",
+    "action": "read",
+    "resource": "github:contents",
+    "weight": 15,
+    "expected_rare": false
+  },
+  {
+    "subject": "gha:deploy",
+    "action": "write",
+    "resource": "github:deployments",
+    "weight": 15,
+    "expected_rare": false
+  },
+  {
+    "subject": "gha:deploy",
+    "action": "write",
+    "resource": "github:id-token",
+    "weight": 2,
+    "expected_rare": true
+  }
+]

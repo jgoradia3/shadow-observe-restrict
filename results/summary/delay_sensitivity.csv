@@ -1,0 +1,4 @@
+delay_ms,events,stale_exposure,convergence_ms,divergence_rate
+500,1200,45,1000,0.0
+3000,1200,120,3500,0.0
+7000,1200,208,7499,0.035

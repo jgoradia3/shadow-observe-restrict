@@ -1,0 +1,9 @@
+Candidate,Approach,Proposed Reduction %,Enforced Reduction %,Legitimate Denials,LDR,Affected IDs,Mismatches,Safety Action
+Over-aggressive candidate,Immediate enforcement,37.5,37.5,3036,0.06072,2,3036,None
+Over-aggressive candidate,Shadow-only validation,37.5,0.0,0,0,0,3036,Shadow only
+Over-aggressive candidate,SOR without rollback,37.5,37.5,2437,0.04874,2,3036,None
+Over-aggressive candidate,Full SOR,37.5,0.0,0,0,0,3036,Promotion withheld
+Lower-risk candidate,Immediate enforcement,12.5,12.5,0,0,0,446,None
+Lower-risk candidate,Shadow-only validation,12.5,0.0,0,0,0,446,Shadow only
+Lower-risk candidate,SOR without rollback,12.5,12.5,0,0,0,446,None
+Lower-risk candidate,Full SOR,12.5,12.5,0,0,0,446,Promoted

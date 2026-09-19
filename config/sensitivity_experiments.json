@@ -1,0 +1,45 @@
+{
+  "description": "Predeclared scale and threshold sensitivity settings for the SOR artifact.",
+  "requests_per_seed": 50000,
+  "observation_prefix_fraction": 0.20,
+  "minimum_gate_observations": 20,
+  "mismatch_rate_threshold": 0.03,
+  "legitimate_denial_threshold": 0,
+  "candidate_expansion_threshold": 0,
+  "seeds": [2026, 2027, 2028],
+  "scales": [
+    {
+      "key": "small",
+      "label": "Small",
+      "identities": 4,
+      "stable_entitlements": 8,
+      "required_entitlements": 7,
+      "source": "bundled primary policy and replay vocabulary"
+    },
+    {
+      "key": "medium",
+      "label": "Medium",
+      "identities": 100,
+      "stable_entitlements": 500,
+      "required_entitlements": 450,
+      "source": "transparent deterministic generator"
+    },
+    {
+      "key": "large",
+      "label": "Large",
+      "identities": 1000,
+      "stable_entitlements": 5000,
+      "required_entitlements": 4500,
+      "source": "transparent deterministic generator"
+    }
+  ],
+  "generated_request_mix": {
+    "required_kept": 0.935,
+    "required_removed_by_unsafe": 0.060,
+    "generator_labeled_redundant": 0.005
+  },
+  "generated_unsafe_candidate": "removes 10 percent of stable entitlements, all from the required-policy oracle",
+  "generated_safe_candidate": "removes all generator-labeled redundant entitlements and no required entitlements",
+  "threshold_values": [0.005, 0.01, 0.03, 0.05, 0.10],
+  "claim_boundary": "The generated scales test control-loop behavior and memory-safe reproduction, not production realism or enterprise traffic semantics."
+}

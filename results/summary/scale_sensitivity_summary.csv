@@ -1,0 +1,4 @@
+Scale,Identities,Stable Entitlements,Required Entitlements,Requests per Seed,Seeds,Over-Aggressive Observation Mismatch Rate Mean,Over-Aggressive Observation Mismatch Rate Range,Over-Aggressive Full SOR Actions,Over-Aggressive Legitimate Denials Total,Lower-Risk Observation Mismatch Rate Mean,Lower-Risk Observation Mismatch Rate Range,Lower-Risk Full SOR Actions,Lower-Risk Legitimate Denials Total
+Small,4,8,7,50000,3,0.061067,0.059900--0.063000,Promotion withheld,0,0.009333,0.008900--0.009800,Promoted,0
+Medium,100,500,450,50000,3,0.059700,0.055600--0.062700,Promotion withheld,0,0.005367,0.004700--0.006100,Promoted,0
+Large,1000,5000,4500,50000,3,0.057367,0.056100--0.059300,Promotion withheld,0,0.005167,0.003900--0.006000,Promoted,0

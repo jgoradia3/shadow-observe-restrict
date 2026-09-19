@@ -1,0 +1,31 @@
+{
+  "version": "candidate-over-aggressive-v1",
+  "description": "Intentionally over-aggressive example candidate that removes three permissions exercised by required synthetic requests. It is included to demonstrate promotion-gate behavior, not as a production policy.",
+  "allow": [
+    {
+      "subject": "svc-build",
+      "action": "read",
+      "resource": "repo"
+    },
+    {
+      "subject": "svc-build",
+      "action": "write",
+      "resource": "artifact"
+    },
+    {
+      "subject": "svc-deploy",
+      "action": "read",
+      "resource": "artifact"
+    },
+    {
+      "subject": "svc-deploy",
+      "action": "write",
+      "resource": "deployment"
+    },
+    {
+      "subject": "svc-backup",
+      "action": "read",
+      "resource": "database"
+    }
+  ]
+}

@@ -171,7 +171,7 @@ See [`docs/PUBLIC_CONFIG_EXAMPLE.md`](docs/PUBLIC_CONFIG_EXAMPLE.md).
 
 ## Citation
 
-Citation metadata is provided in [`CITATION.cff`](CITATION.cff). Update the repository URL and article publication details after they are available.
+Citation metadata is provided in [`CITATION.cff`](CITATION.cff). Article publication details will be added after publication.
 
 ## License
 
